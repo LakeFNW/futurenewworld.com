@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future New World, Inc.</title>
+<meta name="description" content="Future New World, Inc. — Building the next generation of AI-powered experiences.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --gold: #B8956A;
+    --gold-light: #D4B896;
+    --dark: #0A0A0A;
+    --text: #E8E4DF;
+    --text-dim: #8A8580;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 30% 20%, rgba(184, 149, 106, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(184, 149, 106, 0.03) 0%, transparent 50%);
+    animation: drift 20s ease-in-out infinite alternate;
+    z-index: 0;
+  }
+
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-30px, -20px); }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+    max-width: 640px;
+  }
+
+  .line {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 2.5rem;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.3s forwards;
+  }
+
+  .company-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.5s forwards;
+  }
+
+  .inc {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--text-dim);
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
+
+  .divider {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    margin: 0 auto 2.5rem;
+    opacity: 0;
+    animation: fadeIn 1s ease 1s forwards;
+  }
+
+  .contact {
+    opacity: 0;
+    animation: fadeUp 0.8s ease 1.2s forwards;
+  }
+
+  .contact a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+  }
+
+  .contact a:hover {
+    color: var(--gold-light);
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 2rem;
+    z-index: 1;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.5s forwards;
+  }
+
+  .footer span {
+    color: var(--gold);
+    opacity: 0.5;
+    margin: 0 0.5rem;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @media (max-width: 480px) {
+    .company-name { font-size: 1.8rem; }
+    .inc { font-size: 1.2rem; }
+    .tagline { font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="line"></div>
+  <h1 class="company-name">Future New World<span class="inc">, Inc.</span></h1>
+  <p class="tagline">Something new is coming</p>
+  <div class="divider"></div>
+  <div class="contact">
+    <a href="mailto:contact@futurenewworld.com">contact@futurenewworld.com</a>
+  </div>
+</div>
+
+<div class="footer">
+  Delaware, USA <span>&middot;</span> &copy; 2025 Future New World, Inc.
+</div>
+
+</body>
+</html>
